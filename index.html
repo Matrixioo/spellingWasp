@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spelling Bee Clone Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="progress-container">
+            <span id="rankText" class="rank-text">Beginner</span>
+            <div class="progress-bar-bg">
+                <div id="progressBar" class="progress-bar-fill"></div>
+            </div>
+            <span class="score-text"><strong id="score">0</strong> / <span id="maxScore">...</span></span>
+        </div>
+
+        <div class="input-area" id="inputArea">
+            <span id="displayText" class="guess-display"></span>
+            <span class="cursor">|</span>
+        </div>
+
+        <div id="message"></div>
+
+        <div class="honeycomb" id="honeycomb">
+            </div>
+
+        <div class="controls">
+            <button onclick="deleteLetter()" class="btn-minimal">Delete</button>
+            <button onclick="shuffleLetters()" class="btn-circle">
+                &#8635;
+            </button>
+            <button onclick="checkWord()" class="btn-minimal">Enter</button>
+        </div>
+
+        <div class="found-words-section">
+            <p>You have found <strong id="wordCount">0</strong> words</p>
+            <ul id="wordList"></ul>
+        </div>
+    </div>
+
+    <script src="dictionary.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
